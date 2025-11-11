@@ -71,7 +71,7 @@ public class Cylinder extends ThreeDimensionalShape {
         int iRadius = (int) radius;
         int iHeight = (int) height;
         int halfHeight = iHeight / 2;
-        int ovalHeight = iRadius / 2; // Make the ellipse look foreshortened
+        int ovalHeight = iRadius / 2;
 
         //draw top and bottom
         g.drawOval(x - iRadius, y - halfHeight, 2 * iRadius, ovalHeight);
