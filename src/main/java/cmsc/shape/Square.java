@@ -2,9 +2,11 @@
  * Name: Matthew Lukenich
  * Class: CMSC335
  * File: Square.java
- * Date: 10/28/2025
+ * Date: 11/08/2025
  */
-package cmsc.shape.shape;
+package cmsc.shape;
+
+import java.awt.Graphics;
 
 /**
  * Square class that extends TwoDimensionalShape
@@ -45,4 +47,13 @@ public class Square extends  TwoDimensionalShape {
         return side * side;
     }
 
+    @Override
+    public void display(Graphics g, int x, int y) {
+        g.drawRect(x - (int) side / 2, y - (int) side / 2, (int) side, (int) side);
+    }
+
+    @Override
+    public String getDimensions() {
+        return "Side: " + side;
+    }
 }

@@ -2,9 +2,9 @@
  * Name: Matthew Lukenich
  * Class: CMSC335
  * File: ThreeDimensionalShape.java
- * Date: 10/28/2025
+ * Date: 11/08/2025
  */
-package cmsc.shape.shape;
+package cmsc.shape;
 
 /**
  * Abstract class that extends Shape and serves as the

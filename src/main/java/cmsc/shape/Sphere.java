@@ -2,9 +2,11 @@
  * Name: Matthew Lukenich
  * Class: CSMC335
  * File: Sphere.java
- * Data: 10/28/2025
+ * Data: 11/08/2025
  */
-package cmsc.shape.shape;
+package cmsc.shape;
+
+import java.awt.Graphics;
 
 /**
  * Sphere class that extends ThreeDimensionalShape
@@ -45,4 +47,13 @@ public class Sphere extends  ThreeDimensionalShape {
         return (4.0/3.0) * Math.PI * Math.pow(radius, 3);
     }
 
+    @Override
+    public void display(Graphics g, int x, int y) {
+        g.drawOval(x - (int) radius, y - (int) radius, (int) (2 * radius), (int) (2 * radius));
+    }
+
+    @Override
+    public String getDimensions() {
+        return "Radius: " + radius;
+    }
 }

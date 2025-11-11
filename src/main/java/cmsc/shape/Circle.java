@@ -2,9 +2,11 @@
  * Name: Matthew Lukenich
  * Class: CMSC335
  * File: Circle.java
- * Date: 10/28/2025
+ * Date: 11/08/2025
  */
-package cmsc.shape.shape;
+package cmsc.shape;
+
+import java.awt.Graphics;
 
 /**
  * Circle class that extends TwoDimensionalShape
@@ -46,4 +48,13 @@ public class Circle extends TwoDimensionalShape {
         return Math.PI * radius * radius;
     }
 
+    @Override
+    public void display(Graphics g, int x, int y) {
+        g.drawOval(x - (int) radius, y - (int) radius, (int) (2 * radius), (int) (2 * radius));
+    }
+
+    @Override
+    public String getDimensions() {
+        return "Radius: " + radius;
+    }
 }

@@ -2,9 +2,11 @@
  * Name: Matthew Lukenich
  * Class: CMSC335
  * File: Cylinder.java
- * Date: 10/28/2025
+ * Date: 11/08/2025
  */
-package cmsc.shape.shape;
+package cmsc.shape;
+
+import java.awt.Graphics;
 
 /**
  * Cylinder class that extends ThreeDimensionalShape
@@ -64,4 +66,23 @@ public class Cylinder extends ThreeDimensionalShape {
         return Math.PI * Math.pow(radius, 2) * height;
     }
 
+    @Override
+    public void display(Graphics g, int x, int y) {
+        int iRadius = (int) radius;
+        int iHeight = (int) height;
+        int halfHeight = iHeight / 2;
+        int ovalHeight = iRadius / 2; // Make the ellipse look foreshortened
+
+        //draw top and bottom
+        g.drawOval(x - iRadius, y - halfHeight, 2 * iRadius, ovalHeight);
+        g.drawOval(x - iRadius, y + halfHeight - ovalHeight, 2 * iRadius, ovalHeight);
+        //draw vertical sides
+        g.drawLine(x - iRadius, y - halfHeight + ovalHeight / 2, x - iRadius, y + halfHeight - ovalHeight / 2);
+        g.drawLine(x + iRadius, y - halfHeight + ovalHeight / 2, x + iRadius, y + halfHeight - ovalHeight / 2);
+    }
+
+    @Override
+    public String getDimensions() {
+        return "Radius: " + radius + ", Height: " + height;
+    }
 }
