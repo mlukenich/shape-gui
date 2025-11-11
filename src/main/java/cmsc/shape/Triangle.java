@@ -47,6 +47,12 @@ public class Triangle extends TwoDimensionalShape {
         return (Math.sqrt(3) / 4) * side * side;
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         int height = (int) (side * Math.sqrt(3) / 2);

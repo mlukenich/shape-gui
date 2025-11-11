@@ -8,6 +8,9 @@ package cmsc.shape;
 
 import java.awt.Graphics;
 
+/**
+ * Rectangle Class
+ */
 public class Rectangle extends  TwoDimensionalShape {
 
     private double length;

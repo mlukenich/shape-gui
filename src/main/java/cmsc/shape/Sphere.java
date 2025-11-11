@@ -47,11 +47,21 @@ public class Sphere extends  ThreeDimensionalShape {
         return (4.0/3.0) * Math.PI * Math.pow(radius, 3);
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         g.drawOval(x - (int) radius, y - (int) radius, (int) (2 * radius), (int) (2 * radius));
     }
 
+    /**
+     * Getter for dimensions
+     * @return dimensions
+     */
     @Override
     public String getDimensions() {
         return "Radius: " + radius;

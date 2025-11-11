@@ -48,11 +48,21 @@ public class Circle extends TwoDimensionalShape {
         return Math.PI * radius * radius;
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         g.drawOval(x - (int) radius, y - (int) radius, (int) (2 * radius), (int) (2 * radius));
     }
 
+    /**
+     * Getter for dimensions
+     * @return
+     */
     @Override
     public String getDimensions() {
         return "Radius: " + radius;

@@ -66,6 +66,12 @@ public class Cone extends ThreeDimensionalShape {
         return (1.0/3.0) * Math.PI * Math.pow(radius, 2) * height;
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         int iRadius = (int) radius;
@@ -91,6 +97,10 @@ public class Cone extends ThreeDimensionalShape {
         g.drawArc(ellipseX, ellipseY, ellipseWidth, baseOvalHeight, 180, -180);
     }
 
+    /**
+     * Getter for dimensions
+     * @return
+     */
     @Override
     public String getDimensions() {
         return "Radius: " + radius + ", Height: " + height;

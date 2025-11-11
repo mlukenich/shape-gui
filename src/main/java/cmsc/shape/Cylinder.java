@@ -9,7 +9,7 @@ package cmsc.shape;
 import java.awt.Graphics;
 
 /**
- * Cylinder class that extends ThreeDimensionalShape
+ * Cylinder class
  */
 public class Cylinder extends ThreeDimensionalShape {
     private double radius;
@@ -66,6 +66,12 @@ public class Cylinder extends ThreeDimensionalShape {
         return Math.PI * Math.pow(radius, 2) * height;
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         int iRadius = (int) radius;
@@ -81,6 +87,10 @@ public class Cylinder extends ThreeDimensionalShape {
         g.drawLine(x + iRadius, y - halfHeight + ovalHeight / 2, x + iRadius, y + halfHeight - ovalHeight / 2);
     }
 
+    /**
+     * getter for dimensions
+     * @return dimensions
+     */
     @Override
     public String getDimensions() {
         return "Radius: " + radius + ", Height: " + height;

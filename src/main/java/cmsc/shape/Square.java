@@ -47,11 +47,21 @@ public class Square extends  TwoDimensionalShape {
         return side * side;
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         g.drawRect(x - (int) side / 2, y - (int) side / 2, (int) side, (int) side);
     }
 
+    /**
+     * Getter for dimensions
+     * @return dimensions
+     */
     @Override
     public String getDimensions() {
         return "Side: " + side;

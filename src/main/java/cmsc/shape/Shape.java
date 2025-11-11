@@ -10,8 +10,6 @@ import java.awt.Graphics;
 
 /**
  * Abstract class as base for all Shapes.
- *
- * This is the "is-a" relationship foundation
  */
 public abstract class Shape {
 

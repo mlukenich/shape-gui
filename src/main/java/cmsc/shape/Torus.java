@@ -8,6 +8,9 @@ package cmsc.shape;
 
 import java.awt.Graphics;
 
+/**
+ * Torus class that extends ThreeDimensionalShape
+ */
 public class Torus extends ThreeDimensionalShape {
     private double majorRadius; // distance from center of torus to center of the tube
     private double minorRadius; // radius of the tube
@@ -70,6 +73,12 @@ public class Torus extends ThreeDimensionalShape {
         return (Math.PI * Math.pow(minorRadius, 2)) * (2 * Math.PI * majorRadius);
     }
 
+    /**
+     * Override for display method
+     * @param g
+     * @param x
+     * @param y
+     */
     @Override
     public void display(Graphics g, int x, int y) {
         //draw outer circle
@@ -82,6 +91,10 @@ public class Torus extends ThreeDimensionalShape {
         g.drawOval(innerTopLeftX, innerTopLeftY, innerDiameter, innerDiameter);
     }
 
+    /**
+     * Getter for dimensions
+     * @return
+     */
     @Override
     public String getDimensions() {
         return "Major Radius: " + majorRadius + ", Minor Radius: " + minorRadius;

@@ -66,6 +66,10 @@ public class Cube extends ThreeDimensionalShape {
         g.drawLine(x + halfSide, y + halfSide, x + halfSide + offset, y + halfSide - offset);
     }
 
+    /**
+     * Getter for dimensions
+     * @return dimensions
+     */
     @Override
     public String getDimensions() {
         return "Side: " + side;
